@@ -33,6 +33,9 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+
+      // desactiva el warning "'xprop' is missing in props validationeslintreact/prop-types"
+      'react/prop-types': 'off',
     },
   },
 ]
