@@ -1,4 +1,5 @@
 import { CartWidget } from './CartWidget'
+import { Link } from 'react-router'
 
 function Navbar () {
 
@@ -6,16 +7,17 @@ function Navbar () {
         <header>
             <div className='header__container container'>
 
-                <a href="#">
+                <Link to={'/'}>
                     <img src="/logo.png" alt="Logo" />
-                </a>
+                </Link>
 
                 <nav className="navbar">
                     <ul className="nav-links">
-                        <li><a href="#">Mujeres</a></li>
-                        <li><a href="#">Hombres</a></li>
-                        <li><a href="#">Niños</a></li>
-                        <li><a href="#">Adolescentes</a></li>
+                        {/* to do: renderizar todas las categorias que vienen de la api fake store api*/}
+                        <li><Link to="category/beauty">beauty</Link></li>
+                        <li><Link to="category/fragrances">fragrances</Link></li>
+                        <li><Link to="category/furniture">furniture</Link></li>
+                        <li><Link to="category/groceries">groceries</Link></li>
                     </ul>
                 </nav>
 
