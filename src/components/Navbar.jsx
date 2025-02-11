@@ -1,6 +1,6 @@
 import { CartWidget } from './CartWidget'
 
-export const Navbar = () => {
+function Navbar () {
 
     return (
         <header>
@@ -24,3 +24,5 @@ export const Navbar = () => {
         </header>
     )
 }
+
+export default Navbar
