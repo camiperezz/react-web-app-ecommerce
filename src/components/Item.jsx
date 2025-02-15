@@ -3,17 +3,19 @@ import { Link } from 'react-router'
 function Item ({ product }) {
 
     return (
-        <article>
-            <Link to={`/item/${product.id}`}>
+        <Link to={`/item/${product.id}`}>
+            <article>
                 <img src={product.thumbnail} />
                 <div>
                     <h2>{product.title}</h2>
-                    <span>{product.category}</span>
+                    <span className='category-phill'>{product.category}</span>
                     <p>{product.description}</p>
+                    <p className='item-price'>${product.price}</p>
+                    <button className='button-add-to-cart'>+ Agregar al carrito</button>
                 </div>
-            </Link>
             
-        </article>
+            </article>
+        </Link>
     )
 }
 

@@ -5,7 +5,7 @@ function Navbar () {
 
     return (
         <header>
-            <div className='header__container container'>
+            <div className='header-container'>
 
                 <Link to={'/'}>
                     <img src="/logo.png" alt="Logo" />

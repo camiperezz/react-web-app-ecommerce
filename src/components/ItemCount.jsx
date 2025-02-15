@@ -15,10 +15,10 @@ function ItemCount () {
     }
 
     return (
-        <div>
-            <button onClick={handleAdd}>+</button>
-            <p>{count}</p>
+        <div className="qty-component">
             <button onClick={handleRemove}>-</button>
+            <p>{count}</p>
+            <button onClick={handleAdd}>+</button>
         </div>
     )
 }
