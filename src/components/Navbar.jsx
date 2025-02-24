@@ -13,7 +13,6 @@ function Navbar () {
 
                 <nav className="navbar">
                     <ul className="nav-links">
-                        {/* to do: renderizar todas las categorias que vienen de la api fake store api*/}
                         <li><Link to="category/beauty">beauty</Link></li>
                         <li><Link to="category/fragrances">fragrances</Link></li>
                         <li><Link to="category/furniture">furniture</Link></li>
