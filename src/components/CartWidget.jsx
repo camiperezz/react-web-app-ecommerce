@@ -1,8 +1,20 @@
+import { useCart } from "../context/cartContext"
+import { useNavigate } from "react-router"
+
 export const CartWidget = () => {
 
+    const { getQty } = useCart()
+    const navigate = useNavigate()
+
+    const total = getQty()
+
+    const handleClick = () => {
+        navigate('/cart')
+    }
+
     return (
-        <div className="cart">
-            <svg className="cart__icon" width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div onClick={handleClick} className="cart-widget">
+            <svg className="cart-widget-icon" width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_1_7" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="33"> 
                     <rect y="0.5" width="32" height="32" fill="#D9D9D9" />
                 </mask>
@@ -14,7 +26,7 @@ export const CartWidget = () => {
                 </g>
             </svg>
 
-            <span className="cart__qty">0</span>
+            <span className="cart-widget-qty">{total}</span>
         </div>
     )
 }

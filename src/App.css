@@ -182,19 +182,20 @@ header img {
   color: #f9679f;
 }
 
-.cart {
+.cart-widget {
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 
-.cart__icon {
+.cart-widget-icon {
   width: 32px;
   height: 32px;
   fill: white;
 }
 
-.cart__qty {
+.cart-widget-qty {
   position: absolute;
   top: -5px;
   right: -5px;
