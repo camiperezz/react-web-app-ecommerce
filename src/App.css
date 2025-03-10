@@ -240,6 +240,10 @@ header img {
   border-radius: 8px;
 }
 
+.pdp-img-container img {
+  width: 100%;
+}
+
 .pdp-content {
   text-align: left;
   width: 50%;
