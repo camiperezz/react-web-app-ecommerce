@@ -13,10 +13,10 @@ function Navbar () {
 
                 <nav className="navbar">
                     <ul className="nav-links">
-                        <li><Link to="category/beauty">beauty</Link></li>
-                        <li><Link to="category/fragrances">fragrances</Link></li>
-                        <li><Link to="category/furniture">furniture</Link></li>
-                        <li><Link to="category/groceries">groceries</Link></li>
+                        <li><Link to="category/mujer">mujer</Link></li>
+                        <li><Link to="category/unisex">unisex</Link></li>
+                        <li><Link to="category/hombre">hombre</Link></li>
+                        <li><Link to="category/infantil">infantil</Link></li>
                     </ul>
                 </nav>
 
