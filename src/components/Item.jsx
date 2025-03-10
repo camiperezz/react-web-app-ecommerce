@@ -5,9 +5,9 @@ function Item ({ product }) {
     return (
         <Link to={`/item/${product.id}`}>
             <article>
-                <img src={product.thumbnail} />
+                <img src={product.image} />
                 <div>
-                    <h2>{product.title}</h2>
+                    <h2>{product.name}</h2>
                     <span className='category-phill'>{product.category}</span>
                     <p>{product.description}</p>
                     <p className='item-price'>${product.price}</p>
