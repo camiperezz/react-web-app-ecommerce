@@ -3,7 +3,7 @@ import { useCart } from "../context/cartContext"
 
 function ItemCount ({ product }) {
 
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
     const { addToCart } = useCart()
 
     const handleAdd = () => {
@@ -11,14 +11,14 @@ function ItemCount ({ product }) {
     }
 
     const handleRemove = () => {
-        if (count > 0) {
+        if (count > 1) {
             setCount(count - 1)
         }
     }
 
     const handleAddToCart = () => {
         addToCart({ ...product, qty: count })
-        setCount(0)
+        setCount(1)
     }
 
     return (
