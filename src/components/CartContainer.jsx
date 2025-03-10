@@ -12,6 +12,12 @@ export const CartContainer = () => {
                 :
                 <CartLineList cart={cart} />
             }
+
+            <a href="/checkout">
+                <button>
+                    Ir al checkout
+                </button>
+            </a>
         </div>
     )
     
