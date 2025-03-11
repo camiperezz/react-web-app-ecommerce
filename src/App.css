@@ -182,6 +182,10 @@ header img {
   color: #f9679f;
 }
 
+.nav-link-active {
+  color: #f9679f !important;
+}
+
 .cart-widget {
   display: flex;
   align-items: center;

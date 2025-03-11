@@ -1,5 +1,5 @@
 import { CartWidget } from './CartWidget'
-import { Link } from 'react-router'
+import { Link, NavLink } from 'react-router'
 
 function Navbar () {
 
@@ -13,12 +13,46 @@ function Navbar () {
 
                 <nav className="navbar">
                     <ul className="nav-links">
-                        <li><Link to="category/mujer">mujer</Link></li>
-                        <li><Link to="category/unisex">unisex</Link></li>
-                        <li><Link to="category/hombre">hombre</Link></li>
-                        <li><Link to="category/infantil">infantil</Link></li>
+                        <li>
+                            <NavLink to="category/mujer"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "nav-link-active" : ""
+                                }
+                            >
+                                mujer
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="category/unisex"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "nav-link-active" : ""
+                                }
+                            >
+                                unisex
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="category/hombre"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "nav-link-active" : ""
+                                }
+                            >
+                                hombre
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="category/infantil"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "nav-link-active" : ""
+                                }
+                            >
+                                infantil
+                            </NavLink>
+                        </li>
                     </ul>
                 </nav>
+
+                
 
                 <CartWidget />
             </div>
