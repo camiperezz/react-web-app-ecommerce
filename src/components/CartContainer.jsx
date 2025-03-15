@@ -1,6 +1,7 @@
 import { useCart } from '../context/cartContext'
 import { CartLineList } from './CartLineList'
 import { Link } from 'react-router'
+import Button from './Button'
 
 export const CartContainer = () => {
     const { cart } = useCart()
@@ -15,9 +16,7 @@ export const CartContainer = () => {
             }
 
             <Link to={`/checkout`}>
-                <button>
-                    Ir al checkout
-                </button>
+                    <Button text="Ir al checkout" />
             </Link>
         </div>
     )

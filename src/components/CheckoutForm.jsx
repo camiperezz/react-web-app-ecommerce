@@ -4,6 +4,8 @@ import { useCart } from '../context/cartContext'
 import { serverTimestamp } from 'firebase/firestore'
 import { createOrder } from '../firebase/db'
 import { useNavigate } from 'react-router'
+import Input from './Input'
+import Button from './Button'
 
 function CheckoutForm () {
     const { cart, getTotal } = useCart()
@@ -43,21 +45,11 @@ function CheckoutForm () {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required />
-                <p>We will never share your email with anyone else.</p>
-            </div>
-            <div>
-                <label htmlFor="name">Name</label>
-                <input type="name" id="name" name="name" placeholder="Enter your name" required />
-            </div>
-            <div>
-                <label htmlFor="phone">Phone</label>
-                <input type="phone" id="phone" name="phone" placeholder="Enter your phone" required />
-            </div>
+            <Input labelText="Email address" description="We will never share your email with anyone else." type="email" id="email" name="email" placeholder="Enter your email" required />
+            <Input labelText="Name" type="name" id="name" name="name" placeholder="Enter your name" required />
+            <Input labelText="Phone" type="phone" id="phone" name="phone" placeholder="Enter your phone" required />
 
-            <button type="submit">Finalizar compra</button>
+            <Button text="Finalizar compra" type="submit" />
         </form>
     )
 }

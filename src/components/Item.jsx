@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import Button from './Button'
 
 function Item ({ product }) {
 
@@ -11,7 +12,7 @@ function Item ({ product }) {
                     <span className='category-phill'>{product.category}</span>
                     <p>{product.description}</p>
                     <p className='item-price'>${product.price}</p>
-                    <button className='button-add-to-cart'>+ Agregar al carrito</button>
+                    <Button className='button-styles' text="Ver mas" />
                 </div>
             
             </article>

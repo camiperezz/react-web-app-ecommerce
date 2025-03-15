@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useCart } from "../context/cartContext"
+import Button from "./Button"
 
 function ItemCount ({ product }) {
 
@@ -24,11 +25,11 @@ function ItemCount ({ product }) {
     return (
         <>
             <div className="qty-component">
-                <button onClick={handleRemove}>-</button>
+                <Button onClick={handleRemove} text="-" />
                 <p>{count}</p>
-                <button onClick={handleAdd}>+</button>
+                <Button onClick={handleAdd} text="+" />
             </div>
-            <button onClick={handleAddToCart} className='button-add-to-cart'>+ Agregar al carrito</button>
+            <Button onClick={handleAddToCart} className='button-styles' text="Agregar al carrito" />
         </>
     )
 }
