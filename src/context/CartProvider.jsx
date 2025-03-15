@@ -5,13 +5,9 @@ function CartProvider( {children} ) {
     const [cart, setCart] = useState([])
 
     const getQty = () => {
-        console.log('cart:')
-        console.log(cart)
         const quantities = cart.map(product => product.qty)
         const result = quantities.reduce((acc, current) => acc + current, 0)
 
-        console.log('result:')
-        console.log(result)
         return result
     }
 

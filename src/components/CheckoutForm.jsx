@@ -20,18 +20,12 @@ function CheckoutForm () {
         const name = form.name.value
         const phone = form.phone.value
 
-        console.log("cart en checkout:")
-        console.log(cart)
-
         const order = {
             items: cart,
             user: { userName: name, email, phone },
             time: serverTimestamp(),
             total: getTotal()
         }
-
-        console.log("order")
-        console.log(order)
 
         const orderId = await createOrder(order)
 
