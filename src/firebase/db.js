@@ -43,7 +43,7 @@ export const getProduct = async (idProduct) => {
     if (docSnap.exists()) {
         return {...docSnap.data(), id: docSnap.id}
     } else {
-        console.log("Producto no encontrado");
+        console.log("Product not found");
     }
 }
 

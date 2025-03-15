@@ -13,7 +13,7 @@ function CheckoutForm () {
     const MySwal = withReactContent(Swal)    
 
     const handleSubmit = async (e) => {
-        e.preventDefault() // evitar recargar la pagina
+        e.preventDefault()
 
         const form = e.target
         const email = form.email.value
