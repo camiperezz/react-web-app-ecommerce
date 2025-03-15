@@ -4,7 +4,7 @@ import ItemListContainer from './components/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import PageNotFound from './components/PageNotFound'
 import CheckoutContainer from './components/CheckoutContainer'
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router"
 import CartContainer from './components/CartContainer'
 
 function App() {
