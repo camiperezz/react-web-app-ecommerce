@@ -1,10 +1,14 @@
 import { useCart } from '../context/cartContext'
-import { CartLineList } from './CartLineList'
+import CartList from './CartList'
 import { Link } from 'react-router'
 import Button from './Button'
 
-export const CartContainer = () => {
-    const { cart } = useCart()
+const CartContainer = () => {
+    const { cart, clearCart } = useCart()
+
+    const handleClearCart = () => {
+        clearCart()
+    }
 
     return (
         <div className="cart-page container">
@@ -12,14 +16,21 @@ export const CartContainer = () => {
             {cart.length == 0 ? 
                 <h2>Tu carrito esta vacío</h2>
                 :
-                <CartLineList cart={cart} />
+                <CartList cart={cart} />
             }
 
-            <Link to={`/checkout`}>
+            <div className='cart-page-actions'>
+                <Button onClick={handleClearCart} text="Vaciar carrito" />
+
+                <Link to={`/checkout`}>
                     <Button text="Ir al checkout" />
-            </Link>
+                </Link>
+            </div>
+
+            
         </div>
     )
     
-
 }
+
+export default CartContainer

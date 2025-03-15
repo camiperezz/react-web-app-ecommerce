@@ -8,7 +8,7 @@ import Input from './Input'
 import Button from './Button'
 
 function CheckoutForm () {
-    const { cart, getTotal } = useCart()
+    const { cart, getTotal, clearCart } = useCart()
     const navigate = useNavigate()
     const MySwal = withReactContent(Swal)    
 
@@ -29,7 +29,7 @@ function CheckoutForm () {
 
         const orderId = await createOrder(order)
 
-        // to do: clearCart()
+        clearCart()
 
         MySwal.fire({
             title: <p>Gracias por tu compra</p>,

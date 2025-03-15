@@ -1,6 +1,13 @@
 import Button from "./Button"
+import { useCart } from '../context/cartContext'
 
 function CartLine ({ prod }) {
+
+    const { removeItem } = useCart()
+
+    const handleRemoveItem = () => {
+        removeItem(prod.id);
+    };
 
     return (
         <article>

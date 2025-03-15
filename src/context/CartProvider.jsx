@@ -18,14 +18,34 @@ function CartProvider( {children} ) {
         return total
     }
 
-    const addToCart = (product) => { // to do: evitar productos duplicados
-        setCart([...cart, product ])
-    }
+    const addToCart = (addedProduct) => {       
 
-    // const addToCart = item => setCart({...cart, item})
+        setCart((prevCart) => {
+            const existingProduct = prevCart.find((cartItem) => cartItem.id === addedProduct.id);
+    
+            if (existingProduct) {
+                return prevCart.map((cartItem) =>
+                    cartItem.id === addedProduct.id
+                        ? { ...cartItem, qty: cartItem.qty + addedProduct.qty }
+                        : cartItem
+                );
+            } else {
+                return [...prevCart, addedProduct];
+            }
+        });
+    };
 
+    const removeItem = (productId) => {
+        setCart((prevCart) => prevCart.filter((cartItem) => cartItem.id !== productId));
+    };
+    
+
+    const clearCart = () => {
+        setCart([]);
+    };
+    
     return (
-        <cartContext.Provider value={{ addToCart, getQty, getTotal, cart }}>
+        <cartContext.Provider value={{ cart, getQty, getTotal, addToCart, removeItem, clearCart }}>
             {children}
         </cartContext.Provider>
     )
