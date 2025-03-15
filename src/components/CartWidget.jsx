@@ -1,7 +1,7 @@
 import { useCart } from "../context/cartContext"
 import { useNavigate } from "react-router"
 
-export const CartWidget = () => {
+const CartWidget = () => {
 
     const { getQty } = useCart()
     const navigate = useNavigate()
@@ -30,3 +30,5 @@ export const CartWidget = () => {
         </div>
     )
 }
+
+export default CartWidget

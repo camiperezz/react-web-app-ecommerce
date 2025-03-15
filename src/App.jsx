@@ -5,7 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 import PageNotFound from './components/PageNotFound'
 import { Checkout } from './components/Checkout'
 import { BrowserRouter, Routes, Route } from "react-router";
-import { CartContainer } from './components/CartContainer'
+import CartContainer from './components/CartContainer'
 
 function App() {
 

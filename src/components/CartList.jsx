@@ -1,6 +1,6 @@
 import CartLine from './CartLine'
 
-export function CartLineList ({ cart }) {
+function CartList ({ cart }) {
 
     return (
         <section>
@@ -8,3 +8,5 @@ export function CartLineList ({ cart }) {
         </section>
     )
 }
+
+export default CartList

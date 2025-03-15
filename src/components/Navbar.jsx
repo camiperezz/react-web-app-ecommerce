@@ -1,4 +1,4 @@
-import { CartWidget } from './CartWidget'
+import CartWidget from './CartWidget'
 import { Link, NavLink } from 'react-router'
 
 function Navbar () {
