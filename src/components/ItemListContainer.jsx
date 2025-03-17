@@ -5,18 +5,31 @@ import ItemList from './ItemList'
 
 function ItemListContainer () {
     const [items, setItems] = useState([])
-    const { nameCategory } = useParams()    
-   
+    const [loading, setLoading] = useState(true)
+    const { nameCategory } = useParams()
+
     useEffect(() => {
-        if (nameCategory) {
-            getProductsByCategory(nameCategory).then(res => setItems(res))
-        } else {
-            getProducts().then(res => setItems(res))
-        }
+        setLoading(true)
+        const fetchData = nameCategory ? getProductsByCategory(nameCategory) : getProducts()
+        
+        fetchData.then(res => {
+            setItems(res)
+        }).finally(() => {
+            setLoading(false)
+        })
+
     }, [nameCategory])
 
     return (
-        <ItemList items={items} />
+        <div>
+            {loading ? (
+                <div className="container loader-container">
+                    <div className="loader"></div>
+                </div>
+            ) : (
+                <ItemList items={items} />
+            )}
+        </div>
     )
 }
 
