@@ -13,6 +13,7 @@ Proyecto desarrollado como parte del curso **React JS Flex** en la plataforma [C
 - Finalizar compra ingresando datos del usuario.
 - Creación de orden de compra con un identificador único.
 
+  
 ## 🌐 Link de producción
 
 [Acceder al eCommerce](https://tu-enlace-de-produccion.com) *(Actualizar cuando esté disponible)*.
@@ -26,6 +27,7 @@ Proyecto desarrollado como parte del curso **React JS Flex** en la plataforma [C
 - [Firebase](https://firebase.google.com/) - Backend como servicio de base de datos.
 - [SweetAlert2](https://sweetalert2.github.io/) - Notificaciones y alertas personalizadas.
 - [SweetAlert2 React Content](https://github.com/sweetalert2/sweetalert2-react-content) - Integración de SweetAlert2 con React.
+- [React Toastify](https://fkhadra.github.io/react-toastify/introduction) - Sistema de notificaciones para React.
 
 
 ## 📂 Estructura del proyecto
