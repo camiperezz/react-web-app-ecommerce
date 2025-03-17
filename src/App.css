@@ -380,3 +380,7 @@ header img {
       transform: rotate(360deg);
   }
 }
+
+.Toastify__progress-bar-theme--dark {
+  background: #f4146a;
+}

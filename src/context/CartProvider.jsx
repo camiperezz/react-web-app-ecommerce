@@ -1,5 +1,6 @@
 import { cartContext } from "./cartContext"
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 
 function CartProvider( {children} ) {
     const [cart, setCart] = useState([])
@@ -23,6 +24,11 @@ function CartProvider( {children} ) {
         setCart((prevCart) => {
             const existingProduct = prevCart.find((cartItem) => cartItem.id === addedProduct.id)
     
+            toast("Producto agregado al carrito!", {
+                position: "bottom-right",
+                theme: "dark"
+            });
+            
             if (existingProduct) {
                 return prevCart.map((cartItem) =>
                     cartItem.id === addedProduct.id
@@ -36,18 +42,29 @@ function CartProvider( {children} ) {
     }
 
     const removeItem = (productId) => {
+        toast("Producto eliminado del carrito!", {
+            position: "bottom-right",
+            theme: "dark"
+        });
         setCart((prevCart) => prevCart.filter((cartItem) => cartItem.id !== productId))
     }
     
 
     const clearCart = () => {
         setCart([])
+        toast("Carrito vaciado!", {
+            position: "bottom-right",
+            theme: "dark"
+        });
     }
     
     return (
-        <cartContext.Provider value={{ cart, getQty, getTotal, addToCart, removeItem, clearCart }}>
-            {children}
-        </cartContext.Provider>
+        <>
+            <ToastContainer />
+            <cartContext.Provider value={{ cart, getQty, getTotal, addToCart, removeItem, clearCart }}>
+                {children}
+            </cartContext.Provider>
+        </>
     )
 }
 
