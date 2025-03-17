@@ -39,9 +39,9 @@ function CheckoutForm () {
 
     return (
         <form onSubmit={handleSubmit}>
-            <Input labelText="Email address" description="We will never share your email with anyone else." type="email" id="email" name="email" placeholder="Enter your email" required />
-            <Input labelText="Name" type="name" id="name" name="name" placeholder="Enter your name" required />
-            <Input labelText="Phone" type="phone" id="phone" name="phone" placeholder="Enter your phone" required />
+            <Input labelText="Email" description="Nunca compartiremos su correo electrónico con nadie más." type="email" id="email" name="email" placeholder="Ingresa tu email" required />
+            <Input labelText="Name" type="name" id="name" name="name" placeholder="Ingresa tu name" required />
+            <Input labelText="Phone" type="phone" id="phone" name="phone" placeholder="Ingresa tu phone" required />
 
             <Button text="Finalizar compra" type="submit" />
         </form>

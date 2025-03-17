@@ -4,7 +4,9 @@ import { Link } from 'react-router'
 import Button from './Button'
 
 const CartContainer = () => {
-    const { cart, clearCart } = useCart()
+    const { cart, clearCart, getTotal } = useCart()
+
+    const total = getTotal()
 
     const handleClearCart = () => {
         clearCart()
@@ -24,6 +26,8 @@ const CartContainer = () => {
                 :
                 <>
                     <CartList cart={cart} />
+
+                    <span className='cart-page-total'>Total: ${total}</span>
 
                     <div className='cart-page-actions'>
                         <Button onClick={handleClearCart} text="Vaciar carrito" />
