@@ -1,12 +1,10 @@
-
-function Button ({ text, children, ...props }) {
-
+function Button({ text, children, variant = "button-styles", ...props }) {
     return (
-        <button className="button-styles" {...props}>
+        <button className={variant} {...props}>
             {text}
             {children}
         </button>
-    )
+    );
 }
 
-export default Button
+export default Button;
