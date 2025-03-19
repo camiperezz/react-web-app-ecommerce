@@ -20,6 +20,7 @@
   max-width: 1300px;
   margin: 0 auto;
   margin-top: 160px;
+  min-height: 100vh;
 }
 
 .item-list {
@@ -126,6 +127,14 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
+}
+
+footer {
+  padding: 20px;
+  background-color: black;
+  border-top: 1px solid #f9679f;;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
 
 .header-container {
@@ -261,6 +270,7 @@ header img {
 
 .pdp-img-container {
   width: 40%;
+  height: fit-content;
   padding: 50px;
   background-color: black;
   border-radius: 8px;
