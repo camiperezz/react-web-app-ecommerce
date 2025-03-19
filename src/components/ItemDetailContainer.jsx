@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router"
 import { getProduct } from "../firebase/db"
+import { useCart } from "../context/cartContext"
 import ItemDetail from "./ItemDetail"
 
 function ItemDetailContainer () {
@@ -9,8 +10,7 @@ function ItemDetailContainer () {
     const { idProduct } = useParams()
     const navigate = useNavigate()
     const [notFound, setNotFound] = useState(false)
-
-    
+    const { cart } = useCart()
 
     useEffect(() => {
         setLoading(true)
@@ -33,6 +33,8 @@ function ItemDetailContainer () {
         return null
     }
 
+    const isInCart = detail && cart.some(item => item.id === detail.id)
+
     return (
         <div>
             {loading ? (
@@ -40,7 +42,7 @@ function ItemDetailContainer () {
                     <div className="loader"></div>
                 </div>
             ) : (
-                <ItemDetail detail={detail} />
+                <ItemDetail detail={detail} isInCart={isInCart} />
             )}
         </div>
     )
