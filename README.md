@@ -12,11 +12,13 @@ Proyecto desarrollado como parte del curso **React JS Flex** en la plataforma [C
 - Vaciar carrito.
 - Finalizar compra ingresando datos del usuario.
 - Creación de orden de compra con un identificador único.
+- Notificaciones con toasts.
+- Nofificación en PDP de producto ya agregado al carrito.
 
   
 ## 🌐 Link de producción
 
-[Acceder al eCommerce](https://tu-enlace-de-produccion.com) *(Actualizar cuando esté disponible)*.
+https://react-web-app-ecommerce.vercel.app
 
 ## 🚀 Tecnologías utilizadas
 
